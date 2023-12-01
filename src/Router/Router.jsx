@@ -22,13 +22,13 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                loader:()=>fetch('https://commuinity-food-server.vercel.app/addfoods'),
+                loader: () => fetch('http://localhost:5000/addfoods'),
                 element: <Home></Home>,
             },
             {
                 path: "/availablefoods",
-                loader:()=>fetch('https://commuinity-food-server.vercel.app/addfoods'),
-                element:<AvailableFoods></AvailableFoods>,
+                loader: () => fetch('http://localhost:5000/addfoods'),
+                element: <AvailableFoods></AvailableFoods>,
             },
             {
                 path: "/addfood",
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/managefoods",
-                loader:()=>fetch('https://commuinity-food-server.vercel.app/addfoods'),
+                loader: () => fetch('http://localhost:5000/addfoods'),
                 element: <Privetrout><Managefoods></Managefoods></Privetrout>,
             },
             {
@@ -45,21 +45,21 @@ const router = createBrowserRouter([
             },
             {
                 path: "/login",
-                element:<Login></Login>,
+                element: <Login></Login>,
             },
             {
                 path: "/signup",
-                element:<Signup></Signup>,
+                element: <Signup></Signup>,
             },
             {
                 path: "/singlepagedetails/:id",
-                loader:({params})=> fetch(`https://commuinity-food-server.vercel.app/addfoods/${params.id}`),
-                element:<Privetrout><Singlepage></Singlepage> </Privetrout>,
+                loader: ({ params }) => fetch(`http://localhost:5000/addfoods/${params.id}`),
+                element: <Privetrout><Singlepage></Singlepage> </Privetrout>,
             },
             {
                 path: "/manage/:id",
-                loader:({params})=> fetch(`https://commuinity-food-server.vercel.app/addfoods/${params.id}`),
-                element:<Privetrout><Manage></Manage></Privetrout>,
+                loader: ({ params }) => fetch(`http://localhost:5000/addfoods/${params.id}`),
+                element: <Privetrout><Manage></Manage></Privetrout>,
             },
         ]
     },
